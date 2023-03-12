@@ -182,4 +182,8 @@ body {
             transform: translateY(100px);
   }
 }
+
+.records-container {
+  text-align: center;
+}
 /*# sourceMappingURL=main-style.css.map */
