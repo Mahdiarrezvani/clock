@@ -1,0 +1,145 @@
+@import 'mixin';
+$tem:#aeb100;
+$box-shadow: 0 0 13px #b9b9b9;
+* {
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.container {
+    padding: 20px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    .title {
+        font-size: 25px;
+        font-family: 'Comfortaa', cursive;
+    }
+}
+
+.clock {
+    // background-color: transparent;
+    background-color: #f4f4f4;
+    @include boxSizing(200px, 200px, 50%);
+    margin: auto;
+    box-shadow: $box-shadow;
+}
+
+.main {
+    margin-top: 55px;
+    text-align: center;
+    .timer {
+        font-size: 30px;
+        margin-top: 35px;
+        font-family: 'Source Code Pro', monospace;
+        span {
+            font-size: 20px;
+            color: $tem;
+        }
+    }
+    .add-alarm {
+        color: #f9f9f9;
+        background-color: $tem;
+        box-shadow: $box-shadow;
+    }
+}
+
+.bottom {
+    $height-btn: 43px;
+    $pos: 20px;
+    position: fixed;
+    left: $pos;
+    right: $pos;
+    bottom: $pos;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 100px;
+    height: $height-btn;
+    background-color: #e6e6e6;
+    button {
+        position: relative;
+        width: $height-btn;
+        height: $height-btn;
+        a {
+            display: block;
+            border-radius: 50%;
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            i {
+                line-height: $height-btn;
+                color: black;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.btn-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 90px;
+    button {
+        @include boxSizing(55px, 55px, 50%);
+        // background-color: red;
+    }
+    i {
+        font-size: 25px;
+    }
+}
+
+// popup
+.popup {
+    display: none;
+    transform: translateY(-150px);
+    animation: popup 1s linear forwards;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    .close {
+        font-size: 20px;
+        float: left;
+        margin: 5px;
+    }
+    div {
+        margin-top: 60px;
+        input {
+            width: 100px;
+            padding: 2px;
+            text-align: center;
+        }
+    }
+    button {
+        padding: 5px 10px;
+    }
+    .ok {
+        font-size: 17px;
+        justify-self: center;
+        margin: 20px;
+    }
+}
+
+@keyframes popup {
+    from {
+        transform: translateY(-150px);
+    }
+    to {
+        box-shadow: $box-shadow;
+        transform: translateY(100px);
+    }
+}

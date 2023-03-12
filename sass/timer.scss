@@ -1,0 +1,19 @@
+@import 'main-style.scss';
+.records-container {
+    text-align: center;
+    font-size: 20px;
+}
+
+.start {
+    color: $tem;
+}
+
+.popup {
+    div {
+        display: flex;
+        justify-content: space-evenly;
+        input {
+            font-size: 16px;
+        }
+    }
+}

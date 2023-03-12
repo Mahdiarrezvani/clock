@@ -1,0 +1,35 @@
+@import 'main-style.scss';
+body {
+    position: relative;
+}
+
+.main {
+    .alarms {
+        font-family: 'Comfortaa', cursive;
+        margin-top: 85px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 8px;
+        .alarm {
+            display: grid;
+            align-items: center;
+            padding: 5px 0;
+            box-shadow: $box-shadow;
+            border-radius: 10px;
+            div {
+                margin: 0 auto;
+                input {
+                    background-color: $tem;
+                    border: none;
+                }
+            }
+            .time {
+                // font-size: 20px;
+                span {
+                    font-size: 15px;
+                    color: $tem;
+                }
+            }
+        }
+    }
+}

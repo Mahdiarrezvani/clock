@@ -1,0 +1,11 @@
+@import 'main-style.scss';
+.info-city {
+    margin-top: 15px;
+    font-size: 17px;
+    .city {
+        color: $tem;
+    }
+    .date {
+        color: #acacac;
+    }
+}
